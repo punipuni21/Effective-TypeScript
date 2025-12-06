@@ -1,5 +1,5 @@
-function getElement(elOrId: string | HTMLElement | null): HTMLElement | HTMLElement {
-	if (elOrId == null) {
+function getElement(elOrId: string | HTMLElement | null): HTMLElement {
+	if (elOrId === null) {
 		return document.body;
 	}
 	if (typeof elOrId === "object") {
