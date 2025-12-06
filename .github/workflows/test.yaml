@@ -1,5 +1,12 @@
-- name: Run OSV-Scanner
-  on: [push, pull_request]
-  uses: google/osv-scanner-action@v1
-  with:
-    scan-args: --lockfile package-lock.json
+name: Security Scan
+on: [push, pull_request]
+jobs:
+  security-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Run OSV-Scanner
+        uses: google/osv-scanner-action@v1
+        with:
+          scan-args: --lockfile package-lock.json
