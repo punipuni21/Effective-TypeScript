@@ -6,14 +6,16 @@
 	"scripts": {
 		"typecheck": "tsc --noEmit",
 		"build": "bun run typecheck && bun build Chapter1/index.ts --outdir=dist",
-		"dev": "bun run Chapter1/index.ts"
+		"dev": "bun run Chapter1/index.ts",
+		"prepare": "husky"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "^2.3.8",
 		"@tsconfig/bun": "^1.0.10",
 		"@tsconfig/strictest": "^2.0.8",
 		"@types/bun": "latest",
-		"husky": "^9.1.7"
+		"husky": "^9.1.7",
+		"lint-staged": "^16.2.7"
 	},
 	"lint-staged": {
 		"*.{ts,tsx,js,jsx,json}": [
