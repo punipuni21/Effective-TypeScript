@@ -19,11 +19,10 @@
 	},
 	"lint-staged": {
 		"*.{ts,tsx,js,jsx}": [
-			"tsc --noEmit",
 			"biome check --write"
 		],
 		"*.{ts,tsx}": [
-			"bun run typecheck"
+			"tsc --noEmit"
 		]
 	},
 	"peerDependencies": {
