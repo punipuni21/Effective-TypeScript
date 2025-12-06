@@ -1,20 +1,29 @@
 {
-  "name": "effective-typescript",
-  "module": "index.ts",
-  "type": "module",
-  "private": true,
-  "scripts": {
-    "typecheck": "tsc --noEmit",
-    "build": "bun run typecheck && bun build Chapter1/index.ts --outdir=dist",
-    "dev": "bun run Chapter1/index.ts"
-  },
-  "devDependencies": {
-    "@types/bun": "latest",
-    "@biomejs/biome": "^2.3.8",
-    "@tsconfig/bun": "^1.0.10",
-    "@tsconfig/strictest": "^2.0.8"
-  },
-  "peerDependencies": {
-    "typescript": "^5"
-  }
+	"name": "effective-typescript",
+	"module": "index.ts",
+	"type": "module",
+	"private": true,
+	"scripts": {
+		"typecheck": "tsc --noEmit",
+		"build": "bun run typecheck && bun build Chapter1/index.ts --outdir=dist",
+		"dev": "bun run Chapter1/index.ts"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^2.3.8",
+		"@tsconfig/bun": "^1.0.10",
+		"@tsconfig/strictest": "^2.0.8",
+		"@types/bun": "latest",
+		"husky": "^9.1.7"
+	},
+	"lint-staged": {
+		"*.{ts,tsx,js,jsx,json}": [
+			"biome check --write"
+		],
+		"*.{ts,tsx}": [
+			"bun run typecheck"
+		]
+	},
+	"peerDependencies": {
+		"typescript": "^5"
+	}
 }
