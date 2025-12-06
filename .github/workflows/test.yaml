@@ -1,4 +1,5 @@
 - name: Run OSV-Scanner
+  on: [push, pull_request]
   uses: google/osv-scanner-action@v1
   with:
     scan-args: --lockfile package-lock.json

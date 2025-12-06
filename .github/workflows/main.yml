@@ -1,4 +1,0 @@
-- name: Run OSV-Scanner
-  uses: google/osv-scanner-action@v1
-  with:
-    scan-args: --lockfile package-lock.json
