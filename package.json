@@ -22,7 +22,8 @@
 			"biome check --write"
 		],
 		"*.{ts,tsx}": [
-			"bun run typecheck"
+			"bun run typecheck",
+			"tsc --noEmit"
 		]
 	},
 	"peerDependencies": {
