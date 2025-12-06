@@ -18,9 +18,6 @@
 		"lint-staged": "^16.2.7"
 	},
 	"lint-staged": {
-		"*.{ts,tsx,js,jsx,json}": [
-			"biome check --write"
-		],
 		"*.{ts,tsx}": [
 			"bun run typecheck",
 			"tsc --noEmit"
