@@ -5,8 +5,8 @@
 	"private": true,
 	"scripts": {
 		"typecheck": "tsc --noEmit",
-		"build": "bun run typecheck && bun build Chapter1/index.ts --outdir=dist",
-		"dev": "bun run Chapter1/index.ts",
+		"build": "bun run typecheck && bun build src/*.ts --outdir=dist",
+		"dev": "bun run src/Chapter1/index.ts",
 		"prepare": "husky"
 	},
 	"devDependencies": {
