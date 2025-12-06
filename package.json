@@ -18,11 +18,10 @@
 		"lint-staged": "^16.2.7"
 	},
 	"lint-staged": {
-		"*.{js,jsx,json}": [
+		"*.{ts,tsx,js,jsx}": [
 			"biome check --write"
 		],
 		"*.{ts,tsx}": [
-			"biome check --write",
 			"bun run typecheck"
 		]
 	},
