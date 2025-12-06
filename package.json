@@ -19,7 +19,7 @@
 	},
 	"lint-staged": {
 		"*.{ts,tsx,js,jsx}": [
-			"bun run typecheck",
+			"tsc --noEmit",
 			"biome check --write"
 		],
 		"*.{ts,tsx}": [
