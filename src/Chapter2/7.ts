@@ -2,12 +2,10 @@ interface Person {
 	name: string;
 }
 
-interface LifeSpan {
+interface PersonSpan extends Person {
 	birth: Date;
 	death?: Date;
 }
-
-type PersonSpan = Person & LifeSpan;
 
 const ps: PersonSpan = {
 	name: "Alan Turing",
