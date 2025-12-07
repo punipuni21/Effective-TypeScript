@@ -5,9 +5,10 @@
 	"private": true,
 	"scripts": {
 		"typecheck": "tsc --noEmit",
-		"build": "bun run typecheck && bun build Chapter1/index.ts --outdir=dist",
-		"dev": "bun run Chapter1/index.ts",
-		"prepare": "husky"
+		"build": "bun run typecheck && bun build src/*.ts --outdir=dist",
+		"dev": "bun run src/Chapter1/index.ts",
+		"prepare": "husky",
+		"test-build": "bun build src/**/*.ts --outdir=dist/tests"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "^2.3.8",
