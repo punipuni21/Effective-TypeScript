@@ -15,5 +15,5 @@ const ps: PersonSpan = {
 
 console.log(`${ps.name} was born in ${ps.birth.getFullYear()}.`);
 
-// type K = keyof (Person | LifeSpan);
+// type K = keyof PersonSpan;
 // type K = "name" | "birth" | "death"と同じ
