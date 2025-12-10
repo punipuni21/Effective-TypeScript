@@ -5,3 +5,6 @@ function getStringLen(foo: string) {
 
 getStringLen("hello");
 getStringLen(new String("hello").toString());
+
+const a: string = "hello";
+console.log(typeof a); // string
