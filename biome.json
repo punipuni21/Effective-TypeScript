@@ -24,6 +24,12 @@
 			},
 			"complexity": {
 				"noBannedTypes": "error"
+			},
+			"suspicious": {
+				"noShadowRestrictedNames": "error"
+			},
+			"nursery": {
+				"noShadow": "error"
 			}
 		}
 	},
