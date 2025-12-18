@@ -21,6 +21,12 @@
 			"recommended": true,
 			"correctness": {
 				"noUnusedVariables": "error"
+			},
+			"suspicious": {
+				"noShadowRestrictedNames": "error"
+			},
+			"nursery": {
+				"noShadow": "error"
 			}
 		}
 	},
